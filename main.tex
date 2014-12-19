@@ -13,19 +13,63 @@
 %-------------------------------------------------------------------------------
 \usepackage{graphicx}          % graphics
 \usepackage{hyperref}          % urls
-\usepackage{booktabs, caption} % table styling
-\usepackage{amsmath}
-\usepackage{mhchem}            % chemical equations, \ce command
-\usepackage{xcolor}            % custom colors
-\definecolor{mypurple}{HTML}{8054cc}  % definition of a custom color
+\usepackage{pgf}
+%\usepackage{booktabs, caption} % table styling
+%\usepackage{amsmath}
+%\usepackage{mhchem}            % chemical equations, \ce command
+%\usepackage{xcolor}            % custom colors
+%\definecolor{mypurple}{HTML}{8054cc}  % definition of a custom color
 
+\graphicspath{ {./img/} }
 
 %-------------------------------------------------------------------------------
 %                           Font specification
 %-------------------------------------------------------------------------------
-\usepackage{fontspec}
-\setsansfont{Fontin}
-\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+%\usepackage{fontspec}
+%\setsansfont{Fontin}
+%\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+
+
+%-------------------------------------------------------------------------------
+%          Information about Title, Author, Affiliations
+%-------------------------------------------------------------------------------
+\title[Short title of the talk]
+      {Full and really long title of the talk}
+
+\subtitle{PhD progress report or conference talk, I don't know yet}
+
+\date[CONFname]{YYYY-MM-DD}
+
+% This is only inserted into the PDF information catalog. Can be left out
+\keywords{microscopy, Raman, spectroscopy, imaging, RACS, tumour cells}
+
+% Use template below if you are the only author
+%\author[R. Kiselev]{Roman Kiselev}
+%\institute[IPHT Jena]{
+%  Optical cell diagnostics\\
+%  Leibniz Institute of Photonic Technology
+%  }
+
+% This template is for talks with many authors
+\author[R. Kiselev]{
+  Roman Kiselev   \inst{1}     \and
+  Second Author   \inst{2}     \and
+  Third Author    \inst{2,3}   \and
+  Fourh Author    \inst{3}
+  }
+\institute{
+  \inst{1} Leibniz Institute of Photonic Technology \and
+  \inst{2} Another Institute \and
+  \inst{3} Some Other Institute
+  }
+
+% Titlegraphic appears in the middle of the titlepage
+\pgfdeclareimage[height=0.5cm]{titlegraphic}{img/logo1}
+\titlegraphic{\pgfuseimage{titlegraphic}}
+
+% Logo; use \insertlogo anywhere you want
+\pgfdeclareimage[height=0.5cm]{university-logo}{img/logo2}
+\logo{\pgfuseimage{university-logo}}
 
 
 
@@ -36,12 +80,16 @@
 \begin{document}
 %###############################################################################
 
+\maketitle           % makes title for article only
+\frame{\titlepage}   % makes title for presentation only
+
 
 \section{Introduction}
 %---------------------
   Here we provide a detailed introduction, which is printed only in the article mode.
   \begin{frame}{Title}
-    This is the first slide of the presentation
+    There is a problem\ldots\\
+    And we propose a solution\ldots
   \end{frame}
 
 
