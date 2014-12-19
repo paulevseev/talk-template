@@ -1,0 +1,44 @@
+% This is template for BEAMER presentation
+%
+% Author: Roman Kiselev, roman.kiselew@gmail.com
+%
+% Requirements:
+%  * xelatex
+%  * biber
+%  * Fontin font (http://www.exljbris.com/fontinsans.html)
+%
+% Package options:
+%  * article, presentation, handout, trans, ...
+%  * sans/serif, second, font size (8, 9, 10, 11, 12, 14, 17 or 20pt)
+\documentclass[11pt,presentation,sans]{beamer}
+
+
+%--------------------------------------------------------------------
+%                           Necessary packages
+%--------------------------------------------------------------------
+\usepackage{graphicx}          % graphics
+\usepackage{hyperref}          % urls
+\usepackage{booktabs, caption} % table styling
+\usepackage{amsmath}
+\usepackage{mhchem}            % chemical equations, \ce command
+\usepackage{xcolor}            % custom colors
+\definecolor{mypurple}{HTML}{8054cc}  % definition of a custom color
+
+
+%--------------------------------------------------------------------
+%                           Font specification
+%--------------------------------------------------------------------
+\usepackage{fontspec}
+\setsansfont{Fontin}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+
+
+
+
+\begin{document}
+  \section{Introduction}
+    Here we have a kind of introduction, which is printed only in the article mode.
+  \section{Materials and Methods}
+  \section{Results and Conclusion}
+
+\end{document}
