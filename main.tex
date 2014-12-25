@@ -50,18 +50,7 @@
 %  Leibniz Institute of Photonic Technology
 %  }
 
-% This template is for talks with many authors
-\author[R. Kiselev]{
-  Roman Kiselev   \inst{1}     \and
-  Second Author   \inst{2}     \and
-  Third Author    \inst{2,3}   \and
-  Fourh Author    \inst{3}
-  }
-\institute{
-  \inst{1} Leibniz Institute of Photonic Technology \and
-  \inst{2} Another Institute \and
-  \inst{3} Some Other Institute
-  }
+
 
 % Titlegraphic appears in the middle of the titlepage
 \pgfdeclareimage[height=0.5cm]{titlegraphic}{img/logo1}
@@ -72,8 +61,11 @@
 \logo{\pgfuseimage{university-logo}}
 
 
-
-
+%-------------------------------------------------------------------------------
+%                                  Appearance
+%-------------------------------------------------------------------------------
+\usetheme{Warsaw}
+\usecolortheme{crane}
 
 
 %###############################################################################
@@ -87,10 +79,10 @@
 \section{Introduction}
 %---------------------
   Here we provide a detailed introduction, which is printed only in the article mode.
-  \begin{frame}{Title}
+  \frame<presentation>{
     There is a problem\ldots\\
     And we propose a solution\ldots
-  \end{frame}
+    }
 
 
 \section{Materials and Methods}

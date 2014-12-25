@@ -1,4 +1,21 @@
 % Beamer package options:
 %  * sans/serif, second, font size (8, 9, 10, 11, 12, 14, 17 or 20pt)
 \documentclass[ignorenonframetext]{beamer}
+
+% Use script authors.py to generate list of authors
+% ------------- begin list of authors ------------------------------
+\author[R. Kiselev]{
+  Roman Kiselev   \inst{1}     \and
+  Second Author   \inst{2}     \and
+  Third Author    \inst{2,3}   \and
+  Fourh Author    \inst{3}
+  }
+\institute{
+  \inst{1} Leibniz Institute of Photonic Technology \and
+  \inst{2} Another Institute \and
+  \inst{3} Some Other Institute
+  }
+% ------------- end list of authors ------------------------------
+
+
 \input{main.tex}
