@@ -1,31 +1,44 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+af_db = dict(
+  ipht=r"Leibniz Institute of Photonic Technology Jena",
+  iap=r"Institute of Applied Physics Jena",
+  epfl=r"\'Ecole Polytechnique F\'ed\'erale de Lausanne",
+  usd=r"University of Southern Denmark",
+  alcatel=r"Alcatel-Lucent Bell Labs France",
+  zheji=r"Zhejiang University",
+  iceland=r"University of Iceland"
+  )
 
-
-affil = dict(ipht=r"Leibniz Institute of Photonic Technology Jena",
-             iap=r"Institute of Applied Physics Jena",
-             epfl=r"\'Ecole Polytechnique F\'ed\'erale de Lausanne",
-             usd=r"University of Southern Denmark",
-             alcatel=r"Alcatel-Lucent Bell Labs France",
-             zheji=r"Zhejiang University",
-             iceland=r"University of Iceland")
-
-afnums = [(idx + 1, af) for (idx, af) in enumerate(affil)]
+affiliations = ["dummy"]
 
 class Author():
-    def __init__(self, name, af_keys, email=None):
+    def __init__(self, name, institutes, email=None):
+        self.affil = []
+        if type(institutes) == str:
+            institutes = [institutes]
+        for inst in institutes:
+            inst_name = af_db[inst]
+            if not inst_name in affiliations:
+                affiliations.append(inst_name)
+            self.affil.append(affiliations.index(inst_name))
+            
         self.name = name
-        self.affil = af_keys
-        self.email = email
+        if email:
+            self.email = "\\thanks{%s}" % email
+        else:
+            self.email = ""
     
-    def afnums(self):
-        numbers = []
-        for af in self.affil:
-            for afnum in afnums:
-                if afnum[1] == af:
-                    numbers.append(afnum[0])
-        return ",".join([str(number) for number in sorted(numbers)])
+    def print_beamer(self, last=False):
+        output = "  "  + self.name + r"\inst{" + \
+                 ",".join([str(num) for num in self.affil]) + "} " + self.email
+        if not last:
+            output = output.ljust(75) + r"\and"
+        print output
+
+    def print_authblk(self):
+        print r"\author[" + ",".join([str(num) for num in self.affil]) + "]{" + self.name + "}"
 
 
 ###############################################################################
@@ -34,7 +47,7 @@ authors = [
   Author("Svyatoslav Kharitonov", ["epfl"]),
   Author("Ashwani Kumar", ["usd"]),
   Author(r"Ivan Fern\'andez de J\'auregui Ruiz", ["alcatel"]),
-  Author("Xueliang Shi", ["zheij"]),
+  Author("Xueliang Shi", ["zheji"]),
   Author(r"Kristj\'an Le\'osson", ["iceland"]),
   Author("Thomas Pertsch", ["iap"]),
   Author("Sergey Bozhevolnyi", ["usd"]),
@@ -45,12 +58,17 @@ authors = [
 
 print r"\author{"
 for a in authors:
-    print "  " + a.name + "\t" + r"\inst{" + a.afnums() + r"} \and"
+    a.print_beamer(a==authors[-1])
 print "  }"
 
 print r"\institute{"
-for af in afnums:
-    print r"  \inst{" + str(af[0]) + "} " + affil[af[1]] + "\t" + r"\and"
+for num, af in enumerate(affiliations):
+    if num == 0:
+        continue
+    output = r"  \inst{" + str(num) + "} " + af
+    if not af == affiliations[-1]:
+        output = output.ljust(75-13) + r"\vspace{-3mm}\and"
+    print output
 print "  }"
 
 
@@ -58,7 +76,7 @@ print "  }"
 print "\n" + "-"*20 + "\n"
 print r"\usepackage{authblk}"
 for a in authors:
-    print r"\author[" + a.afnums() + "]{" + a.name + "}"
+    a.print_authblk()
 for af in afnums:
     print r"\affil[" + str(af[0]) + "]{" + affil[af[1]] + "}"
 
