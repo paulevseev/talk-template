@@ -43,7 +43,7 @@ class Author():
 
 ###############################################################################
 authors = [
-  Author("Roman Kiselev", ["ipht", "iap"], "roman.kiselev@ipht-jena.de"),
+  Author("Roman Kiselev", ["ipht", "iap"]),
   Author("Svyatoslav Kharitonov", ["epfl"]),
   Author("Ashwani Kumar", ["usd"]),
   Author(r"Ivan Fern\'andez de J\'auregui Ruiz", ["alcatel"]),
@@ -56,7 +56,7 @@ authors = [
   ]
 ###############################################################################
 
-print r"\author{"
+print r"\author[Roman Kiselev, \texttt{roman.kiselev@ipht-jena.de}]{"
 for a in authors:
     a.print_beamer(a==authors[-1])
 print "  }"
@@ -75,22 +75,13 @@ print "  }"
 
 print "\n" + "-"*20 + "\n"
 print r"\usepackage{authblk}"
+print "% Font size for list of authors and affiliations"
+print r"\renewcommand\Authfont{\fontsize{11}{1}\selectfont}"
+print r"\renewcommand\Affilfont{\fontsize{9}{1}\itshape}"
+
 for a in authors:
     a.print_authblk()
 for af in afnums:
     print r"\affil[" + str(af[0]) + "]{" + affil[af[1]] + "}"
-
-
-
-# TODO
-# 1) Add email support
-# 2) Remove last \and
-# 3) Simplify code
-
-
-
-
-
-
 
 
