@@ -1,3 +1,4 @@
+%\documentclass[ignorenonframetext]{beamer} % Just to fool texstudio
 % Template for BEAMER presentation
 %
 % Author: Roman Kiselev, roman.kiselew@gmail.com
@@ -324,6 +325,48 @@
   \shadowbox{shadowbox}, \doublebox{doublebox}, \ovalbox{ovalbox}, and \Ovalbox{Ovalbox}
 \end{frame}
 
+
+\begin{frame}{Columns}
+% Column options:
+  % b  will cause the bottom lines of the columns to be vertically aligned
+  % c  will cause the columns to be centered vertically relative to each other.
+  %       Default, unless the global option t is used.
+  % onlytextwidth  is the same as totalwidth=\textwidth.
+  % t  will cause the first lines of the columns to be aligned. Default if global option t is used.
+  % T  is similar to the t option, but T aligns the tops of the first lines while t
+  %       aligns the so-called baselines of the first lines.
+  % totalwidth=⟨width⟩  will cause the columns to occupy not the whole page width,
+  %       but only ⟨width⟩, all told.
+  \begin{columns}[t]
+    \begin{column}{5cm}
+    Two\\lines.
+    \end{column}
+    \begin{column}{5cm}
+    One line (but aligned).
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Columns}
+% \column  command
+  % Starts a single column. The parameters and options are the same as for the column environment. The
+  % column automatically ends with the next occurrence of \column or of a column environment or of the end
+  % of the current columns environment.
+  \begin{columns}
+    \column[t]{5cm}
+      Two\\lines.
+    \column[t]{5cm}
+      One line (but aligned).
+  \end{columns}
+\end{frame}  
+
+
+\begin{frame}{Abstract}
+  \begin{abstract}
+    This is the abstract
+  \end{abstract}
+\end{frame}  
 
 %###############################################################################
 \end{document}
