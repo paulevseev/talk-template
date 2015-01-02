@@ -74,6 +74,7 @@
 \usecolortheme{crane}
 
 % % % % % Tweaks
+%\setbeamercolor{frametitle}{fg=red}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 
 % Delete this, if you do not want the table of contents to pop up at
@@ -403,6 +404,35 @@
       \end{itemize}
   \end{columns}
 \end{frame}
+
+
+\begin{frame}{Verse and quotations}
+  \begin{verse}
+    This is inside of verse
+  \end{verse}
+  \begin{quotation}
+    This is inside of quotation
+  \end{quotation}
+  \begin{quote}
+    This is inside of quote
+  \end{quote}
+\end{frame}
+
+
+\begin{frame}{Slide transitions}
+  \begin{enumerate}
+    \item<1,2> First
+    \item<2> Second
+    \item<3> Third
+  \end{enumerate}
+  \transblindshorizontal<2>
+  \transblindsvertical<3>
+% Other transitions are:
+%\transboxin, \transboxout, \transdissolve, \transdissolve, \transglitter[direction=90], 
+%\transsplitverticalin, \transsplitverticalout, \transsplithorizontalin, \transsplithorizontalin,
+%\transsplithorizontalout, \transwipe, \transwipe, \transduration
+\end{frame}
+
 
 %###############################################################################
 \end{document}
