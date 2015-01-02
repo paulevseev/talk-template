@@ -15,9 +15,13 @@
 \usepackage{hyperref}          % urls
 \usepackage{pgf}               % for images
 \usepackage{fancybox}          % for \shadowbox, \doublebox, \ovalbox, and \Ovalbox
-%\usepackage{booktabs, caption} % table styling
 %\usepackage{amsmath}
 %\usepackage{mhchem}            % chemical equations, \ce command
+\usepackage{amssymb}           % http://ctan.org/pkg/amssymb
+\usepackage{pifont}            % http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+%\usepackage{booktabs, caption} % table styling
 %\usepackage{xcolor}            % custom colors
 %\definecolor{mypurple}{HTML}{8054cc}  % definition of a custom color
 
@@ -181,7 +185,7 @@
   \begin{frame}{Summary}
     % Keep the summary *very short*.
     \begin{itemize}
-    \item[\checkmark] We again mention our cool results
+    \item[\cmark] We again mention our cool results
     \item We mention something important
     \end{itemize}
     
@@ -191,12 +195,12 @@
     \item
       Outlook
       \begin{itemize}
-      \item[\checkmark]
+      \item[\xmark]
         Something you haven't solved.
       \item
         Something else you haven't solved.
       \end{itemize}
-    \item We acknowledge some people for their help
+    \item[\ding{43}] We acknowledge some people for their help
     \end{itemize}
   \end{frame}
 
