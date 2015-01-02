@@ -4,8 +4,7 @@
 % Author: Roman Kiselev, roman.kiselew@gmail.com
 %
 % Requirements:
-%  * xelatex
-%  * biber
+%  * xelatex (optional)
 %  * Fontin font (http://www.exljbris.com/fontinsans.html)
 
 
@@ -48,7 +47,7 @@
 
 \subtitle{PhD progress report or conference talk, I don't know yet}
 
-\date[CONFname]{YYYY-MM-DD}
+\date[Nanometa-2015]{2015-01-08}
 
 % This is only inserted into the PDF information catalog. Can be left out
 \keywords{microscopy, Raman, spectroscopy, imaging, RACS, tumour cells}
@@ -207,19 +206,45 @@
 
 
 \section*{Introduction}
-%---------------------
-  What topic will cover this talk and what results will be presented. This info is
-  necessary to attract attention of listeners. Place some nice eye-capturing figure here.
+%----------------------
+  We demonstrate data transmission of 10 Gbit/s on-off keying modulated
+  1550 nm signal through a long-range dielectric-loaded surface
+  plasmon polariton waveguide (LR-DLSSPw) structure with negligible signal
+  degradation. In the experiment the bit error rate penalties do not exceed
+  0.6 dB over the 15 nm wavelength range and received optical power
+  between --7 and 3 dBm.
+  \begin{frame}<presentation>{Abstract}
+    We demonstrate 10\,Gbit/s transmission over 300\,$\mu$m-long nanooptic waveguide with negligible signal degradation.
+  \end{frame}
 
 \section{Motivation}
 %-------------------
   Briefly mention some basic technical terms and methods relative to your field / your study.
+  \begin{frame}{Motivation}
+    LR-DLSPPW stands for long-range dielectric-loaded surface plasmon-polariton waveguide.
+    \begin{columns}
+      \column[c]{0.45\textwidth}
+        \begin{figure}
+          \includegraphics[width=\textwidth]{wg_profile.pdf}
+          \caption{Waveguide profile}
+        \end{figure}
+      \column[c]{0.45\textwidth}
+        \begin{itemize}
+         \item Dielectric stripe on metallic one
+         \item Tight sub-wavelength confinement
+         \item mm-long propagation distance
+        \end{itemize}
+    \end{columns}
+  \end{frame}
+
 
 \subsection{The Basic Problem That We Studied}
 %---------------------------------------------
   Here we present the problem that we faced in our study \cite{webb_laser-raman_1980}
 
   \begin{frame}{The Problem}
+  
+
     You can create\cite{webb_laser-raman_1980} overlays\dots
     \begin{itemize}
     \item using the \texttt{pause} command:
