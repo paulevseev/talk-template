@@ -1,12 +1,6 @@
 %\documentclass[ignorenonframetext]{beamer} % Just to fool texstudio
-% Template for BEAMER presentation
-%
+% Presentation for NANOMETA-2015
 % Author: Roman Kiselev, roman.kiselew@gmail.com
-%
-% Requirements:
-%  * xelatex (optional)
-%  * Fontin font (http://www.exljbris.com/fontinsans.html)
-
 
 %-------------------------------------------------------------------------------
 %                           Necessary packages
@@ -51,15 +45,6 @@
 % This is only inserted into the PDF information catalog. Can be left out
 \keywords{photonics, nanooptics, fiber optic communication, telecom,
           bit-error rate, surface plasmon-polaritons, BER penalties}
-
-% Use template below if you are the only author
-%\author[R. Kiselev]{Roman Kiselev}
-%\institute[IPHT Jena]{
-%  Optical cell diagnostics\\
-%  Leibniz Institute of Photonic Technology
-%  }
-
-
 
 % Titlegraphic appears in the middle of the titlepage
 \pgfdeclareimage[height=0.5cm]{titlegraphic}{img/logo1}
@@ -214,20 +199,22 @@
   0.6 dB over the 15 nm wavelength range and received optical power
   between --7 and 3 dBm.
   \begin{frame}<presentation>{Abstract}
-    We demonstrate 10\,Gbit/s transmission over 300\,$\mu$m-long nanooptic waveguide with negligible signal degradation.
+    We demonstrate 10\,Gbit/s transmission over 300\,$\mu$m-long nanooptic
+    waveguide with almost negligible signal degradation.
   \end{frame}
 
 \section{Motivation}
 %-------------------
-  Briefly mention some basic technical terms and methods relative to your field / your study.
-  \begin{frame}{Motivation}
-    LR-DLSPPW -- long-range dielectric-loaded surface plasmon-polariton waveguide.
+  In this section we briefly describe waveguides that we were using; we
+  mention what are their possible application.
+  \begin{frame}{Motivation -- Waveguide Structure}
+    LR-DLSPPW -- long-range dielectric-loaded surface plasmon-polariton waveguide \cite{volkov_long-range_2011}
     \begin{columns}
-      \column[c]{0.47\textwidth}
+      \column[c]{0.42\textwidth}
         \begin{figure}
           \includegraphics[width=\textwidth]{wg_profile.pdf}
         \end{figure}
-      \column[c]{0.5\textwidth}
+      \column[c]{0.58\textwidth}
         \begin{itemize}
          \item Dielectric stripe on metallic one
          \item Tight sub-wavelength confinement
@@ -235,16 +222,44 @@
         \end{itemize}
     \end{columns}
   \end{frame}
+  
+  On the next slide we present the problem~-- these waveguides have huge
+  insertion losses. It is not clear if a modulated signal can be recovered
+  after such waveguide.
 
+  \begin{frame}{Motivation: properties of the LR-DLSPPW structure}
+    \begin{columns}
+      \column[t]{0.5\textwidth}
+        \begin{block}{Key features:}
+          \begin{itemize}
+            \item Strong light confinement
+            \item Low dissipation
+            \item Loss compensation by stimulated emission of plasmonic modes
+          \end{itemize}
+        \end{block}
+      \column[t]{0.5\textwidth}
+        \begin{block}{Possible applications:}
+          \begin{itemize}
+            \item Compact telecom devices
+            \item Integrated plasmonic circuits
+            \item Optical interconnects
+          \end{itemize}
+        \end{block}
+    \end{columns}
+    \begin{exampleblock}{Transmission of modulated signal}
+      Test the performance of LR-DLSSPW under the standard
+      telecom environment
+    \end{exampleblock}
+  \end{frame}
 
 \subsection{The Basic Problem That We Studied}
 %---------------------------------------------
-  Here we present the problem that we faced in our study \cite{webb_laser-raman_1980}
+  Here we present the problem that we faced in our study
 
   \begin{frame}{The Problem}
   
 
-    You can create\cite{webb_laser-raman_1980} overlays\dots
+    You can create overlays\dots
     \begin{itemize}
     \item using the \texttt{pause} command:
       \begin{itemize}
