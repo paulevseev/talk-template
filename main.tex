@@ -63,11 +63,11 @@
 
 % Titlegraphic appears in the middle of the titlepage
 \pgfdeclareimage[height=0.5cm]{titlegraphic}{img/logo1}
-\titlegraphic{\pgfuseimage{titlegraphic}}
+%\titlegraphic{\pgfuseimage{titlegraphic}}
 
 % Logo; use \insertlogo anywhere you want
 \pgfdeclareimage[height=0.5cm]{university-logo}{img/logo2}
-\logo{\pgfuseimage{university-logo}}
+%\logo{\pgfuseimage{university-logo}}
 
 
 %-------------------------------------------------------------------------------
@@ -221,14 +221,13 @@
 %-------------------
   Briefly mention some basic technical terms and methods relative to your field / your study.
   \begin{frame}{Motivation}
-    LR-DLSPPW stands for long-range dielectric-loaded surface plasmon-polariton waveguide.
+    LR-DLSPPW -- long-range dielectric-loaded surface plasmon-polariton waveguide.
     \begin{columns}
-      \column[c]{0.45\textwidth}
+      \column[c]{0.47\textwidth}
         \begin{figure}
           \includegraphics[width=\textwidth]{wg_profile.pdf}
-          \caption{Waveguide profile}
         \end{figure}
-      \column[c]{0.45\textwidth}
+      \column[c]{0.5\textwidth}
         \begin{itemize}
          \item Dielectric stripe on metallic one
          \item Tight sub-wavelength confinement
