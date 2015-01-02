@@ -13,7 +13,8 @@
 %-------------------------------------------------------------------------------
 \usepackage{graphicx}          % graphics
 \usepackage{hyperref}          % urls
-\usepackage{pgf}
+\usepackage{pgf}               % for images
+\usepackage{fancybox}          % for \shadowbox, \doublebox, \ovalbox, and \Ovalbox
 %\usepackage{booktabs, caption} % table styling
 %\usepackage{amsmath}
 %\usepackage{mhchem}            % chemical equations, \ce command
@@ -76,13 +77,66 @@
 \frame{\titlepage}   % makes title for presentation only
 
 
-\section{Introduction}
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+
+\section*{Introduction}
 %---------------------
-  Here we provide a detailed introduction, which is printed only in the article mode.
-  \frame<presentation>{
-    There is a problem\ldots\\
-    And we propose a solution\ldots
-    }
+  What topic will cover this talk and what results will be presented. This info is
+  necessary to attract attention of listeners. Place some nice eye-capturing figure here.
+
+\section{Motivation}
+%-------------------
+  Briefly mention some basic technical terms and methods relative to your field / your study.
+
+\subsection{The Basic Problem That We Studied}
+%---------------------------------------------
+  Here we present the problem that we faced in our study.
+
+  \begin{frame}{The Problem}
+    You can create overlays\dots
+    \begin{itemize}
+    \item using the \texttt{pause} command:
+      \begin{itemize}
+      \item
+        First item.
+        \pause
+      \item    
+        Second item.
+      \end{itemize}
+    \item
+      using overlay specifications:
+      \begin{itemize}
+      \item<3->
+        First item.
+      \item<4->
+        Second item.
+      \end{itemize}
+    \item
+      using the general \texttt{uncover} command:
+      \begin{itemize}
+        \uncover<5->{\item
+          First item.}
+        \uncover<6->{\item
+          Second item.}
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
 
 
 \section{Materials and Methods}
@@ -90,14 +144,166 @@
   This section presents an overview of used materials and methods
   \begin{frame}<presentation>{Methods}
     This slide presents materials and methods\ldots
+    \begin{itemize}
+      \item Place here a lot of figures and
+      \item \textbackslash{}items
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Measurement techniques}
+    We used the following experimental setup
+    \begin{itemize}
+      \item how it works
+      \item what it does
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Data processing techniques}
+    We process the data using:
+    \begin{itemize}
+      \item some cool statistics
+      \item what we get from it
+      \item show some plots
+    \end{itemize}
+  \end{frame}
+
+
+\section{Results and Contribution}
+%---------------------------------
+  \begin{frame}{Results and Contribution}
+  To sum up, we have done this and that. These results are important and cool,
+  they were published elsewhere [Author A, 2014].
+  \end{frame}
+
+
+\section*{Summary}
+%-----------------
+  \begin{frame}{Summary}
+    \begin{itemize}
+      \item We again mention our cool results
+      \item We acknowledge some people for their help
+    \end{itemize}
   \end{frame}
 
 
 
-\section{Results and Conclusion}
-%-------------------------------
-  To sum up, we have done this and that. We acknowledge some people
+%#############################################################################
+% All of the following is optional and typically not needed. 
+\appendix
+\section<presentation>*{\appendixname}
+\subsection<presentation>*{For Further Reading}
 
+\begin{frame}[allowframebreaks]
+  \frametitle<presentation>{For Further Reading}
+    
+  \begin{thebibliography}{10}
+    
+  \beamertemplatebookbibitems
+  % Start with overview books.
+
+  \bibitem{Author1990}
+    A.~Author.
+    \newblock {\em Handbook of Everything}.
+    \newblock Some Press, 1990.
+ 
+    
+  \beamertemplatearticlebibitems
+  % Followed by interesting articles. Keep the list short. 
+
+  \bibitem{Someone2000}
+    S.~Someone.
+    \newblock On this and that.
+    \newblock {\em Journal of This and That}, 2(1):50--100,
+    2000.
+  \end{thebibliography}
+\end{frame}
+
+\begin{frame}{Beamer tools -- use them}
+  \begin{itemize}
+  \item block
+  \item theorem
+  \item<2> example
+  \item[$\checkmark$] proof
+  \item description
+  \item \alert{important stuff}
+  \item use columns
+  \item \textbackslash{}framezoom
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Enumerate, Itemize}
+  There are three important points:
+  \begin{enumerate}
+    \item<1-> A first one,
+    \item<2-> a second one with a bunch of subpoints,
+  \begin{itemize}
+    \item first subpoint. (Only shown from second slide on!).
+    \item<3-> second subpoint added on third slide.
+    \item<4-> third subpoint added on fourth slide.
+  \end{itemize}
+    \item<5-> and a third one.
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Structure}
+  We have some text and then use \structure{\textbackslash{}structure} it it.
+\end{frame}
+
+\begin{frame}{Block}
+  block of text that has a heading
+  \setbeamertemplate{blocks}[default]
+%  \begin{block}<⟨action specification⟩>{⟨block title⟩}<⟨action specification⟩>
+  \begin{block}{block title}
+  environment contents
+  \end{block}
+  \setbeamertemplate{blocks}[rounded][shadow=true]
+  \begin{block}{block title, rounded block with shadow}
+  environment contents
+  \end{block}
+  \begin{alertblock}{alertblock}
+  environment contents
+  \end{alertblock}
+  \begin{exampleblock}{exampleblock}
+  environment contents
+  \end{exampleblock}
+\end{frame}
+
+
+\begin{frame}{Theorem, definition, proof}
+  \begin{theorem}<1->[Theorem -- Additional text]
+  There exists an infinite set.
+  \end{theorem}
+  \begin{definition}<1->[Definition -- Additional text]
+  There exists an infinite set.
+  \end{definition}
+  \begin{proof}<2->[Proof -- Additional text]
+  This follows from the axiom of infinity.
+  \end{proof}
+  \begin{example}<3->[Natural Numbers]
+  The set of natural numbers is infinite.
+  \end{example}
+\end{frame}
+
+
+
+
+\begin{frame}{Framed and boxed text}
+  Text without box
+  \begin{beamercolorbox}{beamer color box}
+    Text in beamercolorbox
+  \end{beamercolorbox}
+  
+  \setbeamercolor{postit}{fg=black,bg=yellow}
+  % Options can be: wd, dp, ht, left, right, center, leftskip, rightskip,
+  %                 sep, colsep, colsep*, shadow, rounded, ignorebg, vmode
+  \begin{beamercolorbox}[sep=1em,wd=5cm]{postit}
+    Place me somewhere!
+  \end{beamercolorbox}
+  
+  \shadowbox{shadowbox}, \doublebox{doublebox}, \ovalbox{ovalbox}, and \Ovalbox{Ovalbox}
+\end{frame}
 
 
 %###############################################################################
