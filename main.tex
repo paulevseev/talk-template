@@ -41,6 +41,11 @@
     \end{itemize}
   \end{frame}
 
+
+% ######################################################################
+
+
+
 \section{Motivation}
 %-------------------
   In this section we briefly describe waveguides that we were using; we
@@ -107,20 +112,46 @@
   \end{frame}
 
 
+% ######################################################################
+
+
+
+
 \section{Materials and Methods}
 %------------------------------
   This section presents an overview of used materials and methods
   \begin{frame}{Methods -- our goals}
-    \begin{itemize}
-      \item Transmit 10\,Gbit/s modulated signal at 1550\,nm
-      \item Find \emph{bit-error rate} (BER) penalties
-      \item Evaluate channel cross-talk
-    \end{itemize}
+    \begin{columns}
+      \column[T]{0.45\textwidth}
+        \begin{itemize}
+          \item Couple 1550\,nm light wave
+          \item Transmit 10\,Gbit/s modulated signal
+          \item Find \emph{bit-error rate} (BER) penalties
+          \item Evaluate channel cross-talk
+        \end{itemize}
+      \column[T]{0.55\textwidth}
+        \includegraphics[width=\textwidth]{sig_and_noise.pdf}
     \pause
-    \begin{exampleblock}{What are \emph{BER penalties}?}
+    \begin{exampleblock}{What is \emph{BER}?}
       \emph{BER} -- probability of incorrect bit detection\\
-      penalty -- \emph{BER} change between tested device and ideal attenuator
     \end{exampleblock}
+    \end{columns}
+
+  \end{frame}
+
+  
+  \begin{frame}{Data processing techniques}
+    \begin{columns}
+      \column[T]{0.45\textwidth}
+        BER is determined statistically from the received signal\\
+        \alert{Place decision threshold on the image}
+      \column[T]{0.55\textwidth}
+        \includegraphics[width=\textwidth]{sig_and_noise.pdf}
+    \end{columns}
+    Eye diagram (left) is the overlay of all possible transitions
+    \begin{center}
+      \includegraphics[width=0.9\textwidth]{hist_processing_diagram.pdf}
+    \end{center}
   \end{frame}
 
   
@@ -136,6 +167,10 @@
      \includegraphics[width=0.8\linewidth]{BER_penalties.pdf}
     \end{center}
   \end{frame}
+
+
+
+
   % subsection concepts (end)
 
   \subsection{Experimental techniques} % (fold)
@@ -173,6 +208,13 @@
       \includegraphics[width=0.9\textwidth]{hist_processing_diagram.pdf}
     \end{center}
   \end{frame}
+
+
+
+% ######################################################################
+
+
+
 
 
 \section{Results and Contribution}
@@ -214,6 +256,49 @@
     \item[\ding{43}] We acknowledge some people for their help
     \end{itemize}
   \end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %##############################################################################
