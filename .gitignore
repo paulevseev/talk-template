@@ -10,3 +10,6 @@ main*.pdf
 *.snm
 *.toc
 *.synctex.gz
+.main-beamer.tex.swp
+main-article.fdb_latexmk
+main-beamer.fdb_latexmk
