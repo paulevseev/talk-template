@@ -65,7 +65,7 @@
 % Themes with sidebar: Berkeley, PaloAlto, Goettingen, Marburg, Hannover
 % Themes with mini frame navi: Berlin, Ilmenau, Dresden, Darmstadt, Frankfurt, Singapore, Szeged
 % Themes with sections and subsections tables: Copenhagen, Luebeck, Malmoe, Warsaw, 
-\usetheme{Warsaw}
+\usetheme{CambridgeUS}
 
 % Themes: default, circles, rectangles, rounded, inmargin
 \useinnertheme{default}
@@ -106,10 +106,21 @@
     \insertsubsectionnavigationsymbol
     \insertsectionnavigationsymbol
     \insertdocnavigationsymbol
-    \insertbackfindforwardnavigationsymbol
-    \hspace{3mm}\insertframenumber/\inserttotalframenumber}
+    \insertbackfindforwardnavigationsymbol}
 \setbeamerfont{navigation symbols}{size=\normalsize}
 
+% Width of blocks
+\addtobeamertemplate{block begin}{%
+  \setlength{\textwidth}{1.0\textwidth}%
+}{}
+
+\addtobeamertemplate{block alerted begin}{%
+  \setlength{\textwidth}{1.0\textwidth}%
+}{}
+
+\addtobeamertemplate{block example begin}{%
+  \setlength{\textwidth}{1.0\textwidth}%
+}{}
 
 %-------------------------------------------------------------------------------
 %                         Bibliography
@@ -230,7 +241,7 @@
 
   \begin{frame}{Motivation: properties of the LR-DLSPPW structure}
     \begin{columns}
-      \column[t]{0.5\textwidth}
+      \column[t]{0.45\textwidth}
         \begin{block}{Key features:}
           \begin{itemize}
             \item Strong light confinement
@@ -238,7 +249,7 @@
             \item Loss compensation by stimulated emission of plasmonic modes
           \end{itemize}
         \end{block}
-      \column[t]{0.5\textwidth}
+      \column[t]{0.45\textwidth}
         \begin{block}{Possible applications:}
           \begin{itemize}
             \item Compact telecom devices
@@ -248,10 +259,12 @@
         \end{block}
     \end{columns}
     \pause
-    \begin{alertblock}{Transmission of modulated signal}
-      Test LR-DLSSPW under the standard
-      telecom environment
-    \end{alertblock}
+    \begin{center}
+      \begin{alertblock}{Transmission of modulated signal}
+        Test LR-DLSSPW under the standard
+        telecom environment
+      \end{alertblock}      
+    \end{center}
   \end{frame}
 
 
@@ -264,13 +277,22 @@
       \item Evaluate bit-error rate (BER) penalties
       \item Evaluate channel cross-talk
     \end{itemize}
+    \pause
+    \begin{exampleblock}{What are \emph{BER penalties}?}
+      \emph{BER} -- probability of incorrect bit detection\\
+      penalty -- \emph{BER} change between tested device and ideal attenuator
+    \end{exampleblock}
   \end{frame}
 
   \begin{frame}{Measurement techniques}
-    We used the following experimental setup
+   \begin{center}
+    \includegraphics[width=\textwidth]{BERsetup.pdf}
+   \end{center}
+    Prototype of fiber optic telecommunication line:
     \begin{itemize}
-      \item how it works
-      \item what it does
+      \item Transmitter
+      \item Device under test
+      \item Receiver
     \end{itemize}
   \end{frame}
 
