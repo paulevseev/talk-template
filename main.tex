@@ -45,19 +45,23 @@
 %-------------------
   In this section we briefly describe waveguides that we were using; we
   mention what are their possible application.
-  \begin{frame}{Motivation -- Waveguide Structure}
-    LR-DLSPPW -- long-range dielectric-loaded surface plasmon-polariton waveguide \cite{volkov_long-range_2011}
+  \begin{frame}{Motivation -- unique waveguiding structure}
+    LR-DLSPPW -- long-range dielectric-loaded surface plasmon-polariton\\
+    \hfill waveguide \cite{volkov_long-range_2011}
     \begin{columns}
       \column[c]{0.42\textwidth}
         \begin{figure}
           \includegraphics[width=43mm]{wg_profile.pdf}
         \end{figure}
       \column[c]{0.58\textwidth}
-        \begin{itemize}
-         \item Dielectric stripe on the metallic one
-         \item Tight sub-wavelength confinement
-         \item mm-long propagation distance
-        \end{itemize}
+        \begin{block}{Configuration -- sandwiched structure}
+          \begin{itemize}
+           \item Gold stripe for mode confinement
+           \item PMMA ridge on gold stripe
+           \item Small longitudinal $\vec{E}$-component
+           \item $\sim 1.0\,\mu{}m$ mode field diameter
+          \end{itemize}
+        \end{block}
     \end{columns}
   \end{frame}
   
@@ -67,19 +71,22 @@
 
   \begin{frame}{Motivation: properties of the LR-DLSPPW structure}
     \begin{columns}
-      \column[t]{0.4\textwidth}
+      \column[t]{0.48\textwidth}
         \begin{block}{Key features:}
           \begin{itemize}
-            \item Strong light confinement
-            \item Low dissipation
-            \item Loss compensation by stimulated emission of plasmonic modes
+            \item Strong mode confinement% $\sim 1\,\mu{}m$
+            \item mm-long propagation range
+            \item Low losses at sharp bends
+            \item Stim. emission of plasmonic modes for loss compensation
           \end{itemize}
         \end{block}
-      \column[t]{0.4\textwidth}
-        \begin{block}{Possible applications:}
+      \column[t]{0.40\textwidth}
+        \begin{block}{Possible applications:\\
+                      Compact telecom devices}
           \begin{itemize}
-            \item Compact telecom devices
-            \item Integrated plasmonic circuits
+            \item Modulators / Resonators
+            \item Couplers / Multiplexers
+            \item Integrated plasmonics
             \item Optical interconnects
           \end{itemize}
         \end{block}
@@ -87,9 +94,13 @@
     \pause
     \begin{center}
       \begin{minipage}{0.8\textwidth}
-        \begin{alertblock}{Transmission of modulated signal}
-          Test LR-DLSSPW under the standard
-          telecom environment
+        \begin{alertblock}{Experiment: transmission of modulated signal}
+          Test LR-DLSSPW in the standard telecom environment:
+          \begin{itemize}
+            \item 1550\,nm
+            \item 10\,Gbit/s, \textsc{on-off} keying
+            \item several channels
+          \end{itemize}
         \end{alertblock}
       \end{minipage}
     \end{center}
@@ -99,10 +110,10 @@
 \section{Materials and Methods}
 %------------------------------
   This section presents an overview of used materials and methods
-  \begin{frame}{Methods}
+  \begin{frame}{Methods -- our goals}
     \begin{itemize}
       \item Transmit 10\,Gbit/s modulated signal at 1550\,nm
-      \item Evaluate bit-error rate (BER) penalties
+      \item Find \emph{bit-error rate} (BER) penalties
       \item Evaluate channel cross-talk
     \end{itemize}
     \pause
@@ -112,6 +123,27 @@
     \end{exampleblock}
   \end{frame}
 
+  
+  \subsection{Concepts} % (fold)
+  %--------------------
+  \label{sub:concepts}
+  \begin{frame}{Concept of Penalties}
+               {Control of Signal Quality}
+    \begin{center}
+     \includegraphics[width=0.8\linewidth]{BER_impairment.pdf}
+    \end{center}
+    \begin{center}
+     \includegraphics[width=0.8\linewidth]{BER_penalties.pdf}
+    \end{center}
+  \end{frame}
+  % subsection concepts (end)
+
+  \subsection{Experimental techniques} % (fold)
+  \label{sub:experimental_techniques}
+  
+
+
+  % subsection experimental_techniques (end)
   \begin{frame}{Measurement techniques}
    \begin{center}
     \includegraphics[width=0.9\textwidth]{BERsetup.pdf}
@@ -124,6 +156,10 @@
     \end{itemize}
   \end{frame}
 
+  \subsection{Data processing} % (fold)
+  \label{sub:data_processing}
+  
+  % subsection data_processing (end)
   \begin{frame}{Data processing techniques}
     \begin{columns}
       \column[T]{0.45\textwidth}
@@ -137,17 +173,6 @@
       \includegraphics[width=0.9\textwidth]{hist_processing_diagram.pdf}
     \end{center}
   \end{frame}
-
-    \label{slide:data_processing}
-  \end{frame}
-
-
-\begin{figure}
-  \begin{center}
-    \includeslide[height=5cm]{slide:data_processing}
-  \end{center}
-  \caption{The first slide (height 5cm). Note the partly covered second item.}
-\end{figure}
 
 
 \section{Results and Contribution}
