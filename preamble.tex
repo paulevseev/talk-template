@@ -1,0 +1,178 @@
+%!TEX root = main-beamer.tex
+%\documentclass[ignorenonframetext]{beamer} % Just to fool texstudio
+% Presentation for NANOMETA-2015
+% Author: Roman Kiselev, roman.kiselew@gmail.com
+
+%-------------------------------------------------------------------------------
+%                           Necessary packages
+%-------------------------------------------------------------------------------
+\usepackage{graphicx}          % graphics
+\usepackage{hyperref}          % urls
+\usepackage{pgf}               % for images
+\usepackage{fancybox}          % for \shadowbox, \doublebox, \ovalbox, and \Ovalbox
+\usepackage{pgfpages}
+%\usepackage{amsmath}
+%\usepackage{mhchem}            % chemical equations, \ce command
+\usepackage{amsfonts}          % http://ctan.org/pkg/amsfonts
+\usepackage{pifont}            % http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+%\usepackage{booktabs, caption} % table styling
+%\usepackage{xcolor}            % custom colors
+%\definecolor{mypurple}{HTML}{8054cc}  % definition of a custom color
+
+\graphicspath{ {./img/} }
+
+%-------------------------------------------------------------------------------
+%                           Second monitor?
+%-------------------------------------------------------------------------------
+%\setbeameroption{previous slide on second screen=left}
+
+%-------------------------------------------------------------------------------
+%                           Font specification
+%-------------------------------------------------------------------------------
+%\usepackage{fontspec}
+%\setsansfont{Fontin}
+
+%-------------------------------------------------------------------------------
+%          Information about Title, Author, Affiliations
+%-------------------------------------------------------------------------------
+\title[Data transmission in LR-DLSPPW]
+      {Data transmission in long-range dielectric-loaded surface plasmon 
+      polariton waveguides}
+
+\date[Nanometa-2015]{8-th of January, 2015}
+
+% This is only inserted into the PDF information catalog. Can be left out
+\keywords{photonics, nanooptics, fiber optic communication, telecom,
+          bit-error rate, surface plasmon-polaritons, BER penalties}
+
+% Titlegraphic appears in the middle of the titlepage
+\pgfdeclareimage[height=0.5cm]{titlegraphic}{img/logo1}
+%\titlegraphic{\pgfuseimage{titlegraphic}}
+
+% Logo; use \insertlogo anywhere you want
+\pgfdeclareimage[height=0.5cm]{university-logo}{img/logo2}
+%\logo{\pgfuseimage{university-logo}}
+
+
+%-------------------------------------------------------------------------------
+%                                  Appearance
+%-------------------------------------------------------------------------------
+% Themes without navi bars: default, boxes, Bergen, Boadilla, Madrid, AnnArbor,
+%                           CambridgeUS, Pittsburgh, Rochester
+% Themes with tree-like bar: Antibes, JuanLesPins, Montpellier
+% Themes with sidebar: Berkeley, PaloAlto, Goettingen, Marburg, Hannover
+% Themes with mini frame navi: Berlin, Ilmenau, Dresden, Darmstadt, Frankfurt, Singapore, Szeged
+% Themes with sections and subsections tables: Copenhagen, Luebeck, Malmoe, Warsaw, 
+\usetheme{CambridgeUS}
+
+% Themes: default, circles, rectangles, rounded, inmargin
+\useinnertheme{default}
+
+% Themes: default, infolines, miniframes, smoothbars, sidebar, split, shadow, tree, smoothtree
+\useoutertheme{default}
+
+% Special themes: default, structure, sidebartab
+% Complete themes: albatross, beetle, crane, dove, fly, seagull, wolverine, beaver
+% Inner themes: lily, orchid, rose
+% Outer themes: whale, seahorse, dolphin, 
+\usecolortheme{crane}
+
+% % % % % Tweaks
+%\setbeamercolor{frametitle}{fg=red}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSection[]
+{
+  \begin{frame}<presentation>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+% Make hidden elements a bit visible
+\setbeamercovered{transparent}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+%\beamerdefaultoverlayspecification{<+->}
+
+% Navigation symbols and frame numbers
+\setbeamertemplate{navigation symbols}{
+    \insertslidenavigationsymbol
+    \insertframenavigationsymbol
+    \insertsubsectionnavigationsymbol
+    \insertsectionnavigationsymbol
+    \insertdocnavigationsymbol
+    \insertbackfindforwardnavigationsymbol}
+\setbeamerfont{navigation symbols}{size=\normalsize}
+
+% Width of blocks
+\addtobeamertemplate{block begin}{%
+  \setlength{\textwidth}{1.0\textwidth}%
+}{}
+
+\addtobeamertemplate{block alerted begin}{%
+  \setlength{\textwidth}{1.0\textwidth}%
+}{}
+
+\addtobeamertemplate{block example begin}{%
+  \setlength{\textwidth}{1.0\textwidth}%
+}{}
+
+%-------------------------------------------------------------------------------
+%                         Bibliography
+%-------------------------------------------------------------------------------
+\usepackage[style=authoryear-icomp,
+            uniquelist=false,
+            uniquename = false,
+            dashed=false,
+            abbreviate=true,
+            dateabbrev=true,
+            maxcitenames=1,
+            backend=bibtex]{biblatex}
+\bibliography{links}
+
+\DeclareBibliographyDriver{article}{%
+	\usebibmacro{bibindex}%
+	\usebibmacro{begentry}%
+	\usebibmacro{author}%/translator+others}%
+	\setunit{\labelnamepunct}\newblock
+	%  \usebibmacro{title}%
+	%  \newunit
+	%  \printlist{language}%
+	\newunit\newblock
+	\usebibmacro{byauthor}%
+	\newunit\newblock
+	\usebibmacro{byeditor+others}%
+	\newunit\newblock
+	%\printfield{version}%
+	\newunit\newblock
+	% \usebibmacro{in:}%
+	\usebibmacro{journal}%
+	\newunit\newblock
+	%\printfield{note}%
+	\setunit{\bibpagespunct}%
+	%\printfield{pages}
+	%  \newunit\newblock
+	%  \printfield{issn}%
+	\newunit\newblock
+	%\printfield{doi}%
+	%  \newunit\newblock
+	%  \usebibmacro{eprint:arxiv}
+	%  \newunit\newblock
+	%  \usebibmacro{url+urldate}%
+	\newunit\newblock
+	\printfield{addendum}%
+	\newunit\newblock
+	\usebibmacro{pageref}%
+	\usebibmacro{finentry}}
+\DefineBibliographyStrings{ngerman}{
+	andothers = {\emph{et\addabbrvspace al\adddot}}            
+}
+
+\renewcommand{\cite}{\footfullcite}
+
+
