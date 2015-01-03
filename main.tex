@@ -147,19 +147,26 @@
   \end{frame}
 
   
-  \begin{frame}{Data processing techniques}
-    \begin{columns}
-      \column[T]{0.45\textwidth}
-        BER is determined statistically from the received signal\\
-        \alert{Place decision threshold on the image}
-      \column[T]{0.55\textwidth}
-        \includegraphics[width=\textwidth]{sig_and_noise.pdf}
-    \end{columns}
+  \begin{frame}{Concept of BER penalty}
+    \begin{block}{Difference between DUT and ideal attenuator in terms of BER}
+      \begin{center}
+        \only<1>{\vbox to 3cm{\vfil
+                 \includegraphics[width=0.55\textwidth]{sig_and_noise.pdf}
+                 \vfil}}
+        \only<2>{\vbox to 3cm{\vfil
+                 \includegraphics[width=0.7\textwidth]{BER_impairment.pdf}\vfil}}
+      \end{center}
+    \end{block}
+    \begin{center}
+     \includegraphics[width=0.65\linewidth]{BER_penalties.pdf}
+    \end{center}
+
     Eye diagram (left) is the overlay of all possible transitions
     \begin{center}
       \includegraphics[width=0.9\textwidth]{hist_processing_diagram.pdf}
     \end{center}
   \end{frame}
+
 
   
   \subsection{Concepts} % (fold)
