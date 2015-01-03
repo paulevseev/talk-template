@@ -131,7 +131,8 @@
         \end{itemize}
       \column[c]{0.45\textwidth}
         \begin{itemize}
-          \item Find \emph{bit-error rate} (BER) penalties
+          \item Find \emph{bit-error rate} (BER)\\
+                \hfill penalties~~~
           \item Evaluate channel cross-talk
         \end{itemize}
     \end{columns}
@@ -150,20 +151,11 @@
   \begin{frame}{Concept of BER penalty}
     \begin{block}{Difference between DUT and ideal attenuator in terms of BER}
       \begin{center}
-        \only<1>{\vbox to 3cm{\vfil
-                 \includegraphics[width=0.55\textwidth]{sig_and_noise.pdf}
-                 \vfil}}
-        \only<2>{\vbox to 3cm{\vfil
-                 \includegraphics[width=0.7\textwidth]{BER_impairment.pdf}\vfil}}
+        \includegraphics[width=0.7\textwidth]{BER_impairment.pdf}
       \end{center}
     \end{block}
     \begin{center}
-     \includegraphics[width=0.65\linewidth]{BER_penalties.pdf}
-    \end{center}
-
-    Eye diagram (left) is the overlay of all possible transitions
-    \begin{center}
-      \includegraphics[width=0.9\textwidth]{hist_processing_diagram.pdf}
+      \includegraphics[width=0.75\linewidth]{BER_penalties.pdf}
     \end{center}
   \end{frame}
 
