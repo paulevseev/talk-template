@@ -175,14 +175,13 @@
         \only<1>{\includegraphics[width=\textwidth]{BERsetup1.pdf}}
         \only<2>{\includegraphics[width=\textwidth]{BERsetup2.pdf}}
         \only<3>{\includegraphics[width=\textwidth]{BERsetup3.pdf}}
+        \only<4>{\includegraphics[width=\textwidth]{BERsetup3.pdf}\\
+                 \vspace{-5mm}\hspace{35mm}\includegraphics[width=0.6\textwidth]{Pbudget.pdf}}
       \end{center}
     \end{block}
   \transdissolve<2>
   \transwipe<3>
-% Other transitions are:
-%\transboxin, \transboxout, \transdissolve, \transdissolve, \transglitter[direction=90], 
-%\transsplitverticalin, \transsplitverticalout, \transsplithorizontalin, \transsplithorizontalin,
-%\transsplithorizontalout, \transwipe, \transwipe, \transduration
+  \transwipe<4>
   \end{frame}
 
 
@@ -304,21 +303,12 @@
   \begin{frame}{Summary}
     % Keep the summary *very short*.
     \begin{itemize}
-    \item[\cmark] We again mention our cool results
-    \item We mention something important
+    \item[\cmark] We demonstrated data transmission through the LR-DLSPPW
+    \item[\cmark] BER penalties are less than 6\,dB over the 15\,nm range
+    \item[\xmark] Most losses are caused by imperfect coupling
     \end{itemize}
-    
-    % The following outlook is optional.
-    \vskip0pt plus.5fill
     \begin{itemize}
-    \item
-      Outlook
-      \begin{itemize}
-      \item[\xmark]
-        Something you haven't solved.
-      \item
-        Something else you haven't solved.
-      \end{itemize}
+    \item[\cmark] Achieved results show the applicability of LR-DLSPPW for data transmission in integrated photonics
     \item[\ding{43}] We acknowledge nice people for their help
     \end{itemize}
   \end{frame}
