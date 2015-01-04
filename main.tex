@@ -189,7 +189,7 @@
         \includegraphics[width=\textwidth]{coupling_alignment_VIS.jpg}
       \column[c]{0.6\textwidth}
         \begin{center}
-          \includegraphics[width=0.65\textwidth]{wg_coupling.pdf}          
+          \includegraphics[width=0.7\textwidth]{wg_coupling.pdf}          
         \end{center}
         \vspace{-2mm}
         \begin{itemize}
@@ -204,17 +204,17 @@
   \begin{frame}{Experimental techniques}
                {Light coupling to LR-DLSSPW}
     \begin{columns}
-      \column{0.45\textwidth}
+      \column{0.42\textwidth}
         \includegraphics[height=7cm]{coupling_setup.pdf}
-      \column{0.45\textwidth}
+      \column{0.48\textwidth}
         \begin{block}{Light coupling system}
           \begin{itemize}
-            \item 3 piezo-driven stages
-            \item IR microscope
+            \item Piezo-driven stages
+            \item IR microscope with huge WD
             \item Photocamera with macrolens
           \end{itemize}
         \end{block}
-        \vspace{2mm}
+        \vspace{0mm}
         \begin{center}
           \includegraphics[width=\textwidth]{coupling.jpg}
         \end{center}
@@ -230,17 +230,24 @@
   
   % subsection data_processing (end)
   \begin{frame}{Data processing techniques}
-    \begin{columns}
-      \column[T]{0.45\textwidth}
-        BER is determined statistically from the received signal\\
-        \alert{Place decision threshold on the image}
-      \column[T]{0.55\textwidth}
-        \includegraphics[width=\textwidth]{sig_and_noise.pdf}
-    \end{columns}
-    Eye diagram (left) is the overlay of all possible transitions
+    \emph{Eye diagram} (left) is the overlay of all possible transitions
+    \vspace{-1mm}
     \begin{center}
-      \includegraphics[width=0.9\textwidth]{hist_processing_diagram.pdf}
+      \includegraphics[width=\textwidth]{hist_processing_diagram.pdf}
     \end{center}
+    \begin{columns}
+      \column[c]{0.5\textwidth}
+        \includegraphics[height=22mm]{diff_fitting.pdf}\hspace{-4mm}
+      \column[c]{0.45\textwidth}
+        \vspace{-3mm}
+        \begin{block}{BER is determined statistically}
+          \begin{enumerate}
+            \item Collect vertical histrogram
+            \item Perform fitting
+            \item Find area of overlap
+          \end{enumerate}
+        \end{block}
+    \end{columns}
   \end{frame}
 
 
