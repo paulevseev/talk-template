@@ -170,17 +170,21 @@
   \label{sub:experimental_techniques}
   
   \begin{frame}{Experimental techniques}
-               {Prototype of fiber optic communication system}
-    \begin{center}
-      \includegraphics[width=0.9\textwidth]{BERsetup.pdf}
-    \end{center}
-    Prototype of fiber optic telecommunication line: \alert{SIMPLIFY IMAGE}
-    \begin{itemize}
-      \item Transmitter
-      \item Device under test
-      \item Receiver
-    \end{itemize}
+    \begin{block}{Prototype of fiber optic communication system}
+      \begin{center}
+        \only<1>{\includegraphics[width=\textwidth]{BERsetup1.pdf}}
+        \only<2>{\includegraphics[width=\textwidth]{BERsetup2.pdf}}
+        \only<3>{\includegraphics[width=\textwidth]{BERsetup3.pdf}}
+      \end{center}
+    \end{block}
+  \transdissolve<2>
+  \transwipe<3>
+% Other transitions are:
+%\transboxin, \transboxout, \transdissolve, \transdissolve, \transglitter[direction=90], 
+%\transsplitverticalin, \transsplitverticalout, \transsplithorizontalin, \transsplithorizontalin,
+%\transsplithorizontalout, \transwipe, \transwipe, \transduration
   \end{frame}
+
 
   \begin{frame}{Experimental techniques}
                {Light coupling to LR-DLSSPW}
