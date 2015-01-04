@@ -43,16 +43,16 @@ class Author():
 
 ###############################################################################
 authors = [
-  Author("Roman Kiselev", ["ipht", "iap"]),
-  Author("Svyatoslav Kharitonov", ["epfl"]),
-  Author("Ashwani Kumar", ["usd"]),
-  Author(r"Ivan Fern\'andez de J\'auregui Ruiz", ["alcatel"]),
-  Author("Xueliang Shi", ["zheji"]),
-  Author(r"Kristj\'an Le\'osson", ["iceland"]),
-  Author("Thomas Pertsch", ["iap"]),
-  Author("Sergey Bozhevolnyi", ["usd"]),
-  Author("Stefan Nolte", ["iap"]),
-  Author("Arkadi Chipouline", ["iap"])
+  Author(r"R.~Kiselev", ["ipht", "iap"]),
+  Author(r"S.~Kharitonov", ["epfl"]),
+  Author(r"A.~Kumar", ["usd"]),
+  Author(r"I.~J\'auregui", ["alcatel"]),
+  Author(r"X.~Shi", ["zheji"]),
+  Author(r"K.~Le\'osson", ["iceland"]),
+  Author(r"T.~Pertsch", ["iap"]),
+  Author(r"S.~Bozhevolnyi", ["usd"]),
+  Author(r"S.~Nolte", ["iap"]),
+  Author(r"A.~Chipouline", ["iap"])
   ]
 ###############################################################################
 
@@ -81,7 +81,9 @@ print r"\renewcommand\Affilfont{\fontsize{9}{1}\itshape}"
 
 for a in authors:
     a.print_authblk()
-for af in afnums:
-    print r"\affil[" + str(af[0]) + "]{" + affil[af[1]] + "}"
+for num, af in enumerate(affiliations):
+    if num == 0:
+        continue
+    print r"\affil[" + str(num) + "]{" + af + "}"
 
 
