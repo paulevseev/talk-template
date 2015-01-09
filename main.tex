@@ -27,18 +27,11 @@
 
 \section*{Introduction}
 %----------------------
-  We demonstrate data transmission of 10 Gbit/s on-off keying modulated
-  1550 nm signal through a long-range dielectric-loaded surface
-  plasmon polariton waveguide (LR-DLSSPw) structure with negligible signal
-  degradation. In the experiment the bit error rate penalties do not exceed
-  0.6 dB over the 15 nm wavelength range and received optical power
-  between –7 and 3 dBm.
   \begin{frame}<presentation>{Abstract}
     \begin{itemize}
-      \item[\cmark] We demonstrate 10\,Gbit/s transmission over\\
-            300\,$\mu$m-long nanooptic waveguide
+      \item[\cmark] We demonstrate this and that \cite{volkov_long-range_2011}
             \vspace{3mm}
-      \item[\cmark] The signal degradation is almost negligible\cite{kharitonov_data_2014}
+      \item[\cmark] This text should be short and interesting fo listeners \cite{kharitonov_data_2014}
     \end{itemize}
   \end{frame}
 
@@ -49,17 +42,14 @@
 
 \section{Motivation}
 %-------------------
-  In this section we briefly describe waveguides that we were using; we
-  mention what are their possible application.
-  \begin{frame}{Motivation – unique waveguiding structure}
-    LR-DLSPPW – long-range dielectric-loaded surface plasmon-polariton\\
-    \hfill waveguide \cite{volkov_long-range_2011}
+  \begin{frame}{Motivation – why we do this}
+    Write here some motivating text
     \begin{columns}
       \column[c]{0.42\textwidth}
         \begin{figure}
           \includegraphics[width=43mm]{wg_profile.pdf}
         \end{figure}
-      \column[c]{0.58\textwidth}
+      \column[c]{0.55\textwidth}
         \begin{block}{Configuration – sandwiched structure}
           \begin{itemize}
            \item Gold stripe for mode confinement
@@ -67,46 +57,44 @@
            \item Small longitudinal $\vec{E}$-component
            \item $\sim 1.0\,\mu{}m$ mode field diameter
           \end{itemize}
+          \begin{center}
+            \includegraphics[width=2.5cm]{mode_profile.png}
+          \end{center}
         \end{block}
     \end{columns}
   \end{frame}
   
-  On the next slide we present the problem~-- these waveguides have huge
-  insertion losses. It is not clear if a modulated signal can be recovered
-  after such waveguide.
-
-  \begin{frame}{Motivation: properties of the LR-DLSPPW structure}
+  \begin{frame}{Motivation – the challenge}
+               {Present some challenges on this slide}
     \vspace{-3mm}
     \begin{columns}
       \column[t]{0.48\textwidth}
         \begin{block}{Key features:}
           \begin{itemize}
-            \item Strong mode confinement% $\sim 1\,\mu{}m$
-            \item mm-long propagation range
-            \item Low losses at sharp bends
-            \item Stim. emission of plasmonic modes for loss compensation
+            \item feature 1
+            \item feature 2
+            \item feature 3
+            \item feature 4
           \end{itemize}
         \end{block}
       \column[t]{0.40\textwidth}
-        \begin{block}{Promising applications:\\
-                      Compact telecom devices}
+        \begin{block}{Promising applications:}
           \begin{itemize}
-            \item Modulators / Resonators
-            \item Couplers / Multiplexers
-            \item Integrated plasmonics
-            \item Optical interconnects
+            \item Application 1
+            \item Application 2
+            \item Application 3
+            \item Application 4
           \end{itemize}
         \end{block}
     \end{columns}
     \pause
     \begin{center}
       \begin{minipage}{0.8\textwidth}
-        \begin{alertblock}{Experiment: transmission of modulated signal}
-          Test LR-DLSSPW in the standard telecom environment:
+        \begin{alertblock}{Experiment:}
+          We have found some problem and want therefore
           \begin{itemize}
-            \item 1550\,nm
-            \item 10\,Gbit/s, \textsc{on-off} keying
-            \item several channels
+            \item do this
+            \item and do that
           \end{itemize}
         \end{alertblock}
       \end{minipage}
@@ -123,29 +111,7 @@
 %------------------------------
   This section presents an overview of used materials and methods
   \begin{frame}{Methods – our goals}
-    \begin{block}{Test LR-DLSPPW in a telecom system}
-    \begin{columns}
-      \column[t]{0.55\textwidth}
-        \begin{itemize}
-          \item Couple 1550\,nm light to waveguide
-          \item Transmit 10\,Gbit/s modulated signal
-        \end{itemize}
-      \column[t]{0.45\textwidth}
-        \begin{itemize}
-          \item Evaluate channel cross-talk
-          \item Find \emph{bit-error rate} (BER)\\
-                \hfill penalties~~~
-        \end{itemize}
-    \end{columns}
-    \vspace{-5mm}
-        \begin{center}
-          \includegraphics[width=0.6\textwidth]{simple_FOCS.pdf}
-        \end{center}
-    \end{block}
-      \begin{exampleblock}{What is \emph{BER}?}
-        \emph{BER} – probability of incorrect bit detection\\
-      \end{exampleblock}
-
+     blah blah
   \end{frame}
 
   
@@ -154,14 +120,6 @@
   %--------------------
   \label{sub:concepts}
   \begin{frame}{Concept of BER penalty}
-    \begin{block}{Difference between DUT and ideal attenuator in terms of BER}
-      \begin{center}
-        \includegraphics[width=0.7\textwidth]{BER_impairment.pdf}
-      \end{center}
-    \end{block}
-    \begin{center}
-      \includegraphics[width=0.4\linewidth]{BER_penalties.pdf}
-    \end{center}
   \end{frame}
   % subsection concepts (end)
 
@@ -171,90 +129,18 @@
   \label{sub:experimental_techniques}
   
   \begin{frame}{Experimental techniques}
-    \begin{block}{Prototype of fiber optic communication system}
+               {We have a series of images on this slide}
+    \begin{block}{The block is 65 mm in height}
       \begin{center}
         \vbox to 65mm{
-        \only<1>{\includegraphics[width=0.95\textwidth]{BERsetup1.pdf}}
-        \only<2>{\includegraphics[width=0.95\textwidth]{BERsetup2.pdf}}
-        \only<3>{\includegraphics[width=0.95\textwidth]{BERsetup3.pdf}}
-        \only<4>{\includegraphics[width=0.95\textwidth]{BERsetup3.pdf}\\
-                 \vspace{-20mm}\hspace{35mm}\includegraphics[width=0.55\textwidth]{Pbudget.pdf}}}
+        \only<1>{\includegraphics[width=0.95\textwidth]{setup1.pdf}}
+        \only<2>{\includegraphics[width=0.95\textwidth]{setup2.pdf}}
+        \only<3>{\includegraphics[width=0.95\textwidth]{setup3.pdf}}
       \end{center}
     \end{block}
   \transdissolve<2>
   \transwipe<3>
-  \transwipe<4>
   \end{frame}
-
-
-  \begin{frame}{Experimental techniques}
-               {Light coupling to LR-DLSSPW}
-    \begin{columns}
-      \column[c]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{coupling_alignment_VIS.jpg}
-      \column[c]{0.6\textwidth}
-        \begin{center}
-          \includegraphics[width=0.7\textwidth]{wg_coupling.pdf}          
-        \end{center}
-        \vspace{-2mm}
-        \begin{itemize}
-          \item Input coupling with lensed fiber
-          \item Collection with cleaved fiber
-        \end{itemize}
-        \vspace{4mm}
-        \includegraphics[width=\textwidth]{coupling_alignment_IR.png}
-    \end{columns}
-  \end{frame}
-
-  \begin{frame}{Experimental techniques}
-               {Light coupling to LR-DLSSPW}
-    \begin{columns}
-      \column{0.42\textwidth}
-        \includegraphics[height=7cm]{coupling_setup.pdf}
-      \column{0.48\textwidth}
-        \begin{block}{Light coupling system}
-          \begin{itemize}
-            \item Piezo-driven stages
-            \item IR microscope with huge WD
-            \item Photocamera with macrolens
-          \end{itemize}
-        \end{block}
-        \vspace{0mm}
-        \begin{center}
-          \includegraphics[width=\textwidth]{coupling.jpg}
-        \end{center}
-    \end{columns}
-    \begin{center}
-    \end{center}
-  \end{frame}
-  % subsection experimental_techniques (end)
-
-
-  \subsection{Data processing} % (fold)
-  \label{sub:data_processing}
-  
-  % subsection data_processing (end)
-  \begin{frame}{Data processing techniques}
-    \emph{Eye diagram} (left) is the overlay of all possible transitions
-    \vspace{-1mm}
-    \begin{center}
-      \includegraphics[width=\textwidth]{hist_processing_diagram_1200px.jpg}
-    \end{center}
-    \begin{columns}
-      \column[c]{0.5\textwidth}
-        \includegraphics[height=22mm]{diff_fitting.png}\hspace{-4mm}
-      \column[c]{0.45\textwidth}
-        \vspace{-3mm}
-        \begin{block}{BER is determined statistically}
-          \begin{enumerate}
-            \item Collect vertical histrogram
-            \item Perform fitting
-            \item Find area of overlap
-          \end{enumerate}
-        \end{block}
-    \end{columns}
-  \end{frame}
-
 
 
 % ######################################################################
@@ -266,22 +152,9 @@
 \section{Results and Contribution}
 %---------------------------------
   \begin{frame}{Results and Contribution}
-               {BER penalty in different wavelength regions}
-    \begin{block}{1541\,–\,1556\,nm, channel spacing 0.4\,nm}
-        \begin{columns}
-          \column[t]{0.6\textwidth}
-          \vspace{2mm}
-      \vbox to 58mm{
-            \only<1,5>{\includegraphics[height=55mm]{Penalties_double_channel_fixed_spacing_different_wavelength.pdf}}
-            \only<2>{\includegraphics[height=55mm]{spectrum1.pdf}}
-            \only<3>{\includegraphics[height=55mm]{spectrum2.pdf}}
-            \only<4>{\includegraphics[height=55mm]{spectrum3.pdf}}}
-          \column[t]{0.4\textwidth}
-          \begin{itemize}
-            \item WG – waveguide
-            \item B2B – back-to-back\\\hfil(reference)~~~
-          \end{itemize}
-        \end{columns}
+               {What we have got}
+    \begin{block}{Our nice results}
+      Place them here
     \end{block}
   \end{frame}
 
@@ -291,19 +164,27 @@
   \begin{frame}{Summary}
     % Keep the summary *very short*.
     \begin{itemize}
-    \item[\cmark] We demonstrated data transmission through the LR-DLSPPW
-    \item[\cmark] BER penalties are less than 6\,dB over the 15\,nm range
-    \item[\xmark] Most losses are caused by imperfect coupling
+    \item[\cmark] We again mention our cool results
+    \item We mention something important
     \end{itemize}
+    
+    % The following outlook is optional.
+    \vskip0pt plus.5fill
     \begin{itemize}
-    \item[\cmark] Achieved results show the applicability of LR-DLSPPW for data transmission in integrated photonics
+    \item
+      Outlook
+      \begin{itemize}
+      \item[\xmark]
+        Something you haven't solved.
+      \item
+        Something else you haven't solved.
+      \end{itemize}
+    \item[\ding{43}] We acknowledge some people for their help
     \end{itemize}
-%    \begin{itemize}
-%    \item[\ding{43}] We acknowledge nice people for their help
-%    \end{itemize}
   \end{frame}
 
 
+% ########### Thanks
 
   \begin{frame}
     \begin{center}
@@ -324,13 +205,6 @@
 
 
 
-%##############################################################################
-\appendix
-\begin{frame}{Experimental setup, full diagram}
-  \begin{center}
-    \includegraphics[width=\textwidth]{BERsetup.pdf}
-  \end{center}
-\end{frame}
 
 
 
@@ -345,26 +219,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%##############################################################################
-\end{document}
-%##############################################################################
 %#############################################################################
 % All of the following is optional and typically not needed. 
 \appendix
@@ -391,12 +245,12 @@
   \bibitem{Someone2000}
     S.~Someone.
     \newblock On this and that.
-    \newblock {\em Journal of This and That}, 2(1):50–100,
+    \newblock {\em Journal of This and That}, 2(1):50--100,
     2000.
   \end{thebibliography}
 \end{frame}
 
-\begin{frame}{Beamer tools – use them}
+\begin{frame}{Beamer tools -- use them}
   \begin{itemize}
   \item block
   \item theorem
@@ -450,13 +304,13 @@
 
 
 \begin{frame}{Theorem, definition, proof}
-  \begin{theorem}<1->[Theorem – Additional text]
+  \begin{theorem}<1->[Theorem -- Additional text]
   There exists an infinite set.
   \end{theorem}
-  \begin{definition}<1->[Definition – Additional text]
+  \begin{definition}<1->[Definition -- Additional text]
   There exists an infinite set.
   \end{definition}
-  \begin{proof}<2->[Proof – Additional text]
+  \begin{proof}<2->[Proof -- Additional text]
   This follows from the axiom of infinity.
   \end{proof}
   \begin{example}<3->[Natural Numbers]
@@ -575,6 +429,6 @@
 \end{frame}
 
 
-%##############################################################################
+%###############################################################################
 \end{document}
-%##############################################################################
+%###############################################################################
