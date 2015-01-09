@@ -56,7 +56,7 @@ authors = [
   ]
 ###############################################################################
 
-print r"\author[Roman Kiselev, \texttt{roman.kiselev@ipht-jena.de}]{"
+print r"\author[~~R. Kiselev, \texttt{roman.kiselev@ipht-jena.de}~~~~~~~]{"
 for a in authors:
     a.print_beamer(a==authors[-1])
 print "  }"
