@@ -13,3 +13,4 @@ main*.pdf
 .main-beamer.tex.swp
 main-article.fdb_latexmk
 main-beamer.fdb_latexmk
+*.fls
