@@ -3,8 +3,8 @@
 *.blg
 *.log
 *.out
-main*.pdf
-handout.pdf
+./main*.pdf
+./handout.pdf
 *blx.bib
 *.nav
 *.run.xml
