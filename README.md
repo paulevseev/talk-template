@@ -7,6 +7,8 @@ This template produces three output files:
  * **main-article.pdf** – article version
  * **handout.pdf** – printable version of presentation
 
+You can take a look at this files under the **sample_output** folder.
+
 ## How to use
 1. Fill in info about talk (author, company, title) into the **preamble.tex**
 2. Place your slides into **main.tex** and images to **img/** folder
