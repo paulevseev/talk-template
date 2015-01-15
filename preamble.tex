@@ -43,28 +43,27 @@
 \title[Short title of the talk]
       {Full and really long title of the talk}
 
-\subtitle{PhD progress report or conference talk, I don't know yet}
+\subtitle{PhD progress report or conference talk, nobody knows}
 
 \date[CONFname]{YYYY-MM-DD}
 
 % This is only inserted into the PDF information catalog. Can be left out
-\keywords{microscopy, Raman, spectroscopy, imaging, RACS, tumour cells}
+\keywords{microscopy, Raman, spectroscopy, imaging}
 
 % Use template below if you are the only author
-\author[R. Kiselev]{Roman Kiselev}
-\institute[IPHT Jena]{
-  Optical cell diagnostics\\
-  Leibniz Institute of Photonic Technology
+\author[A. Author]{Author Author}
+\institute[INST]{
+  your department\\
+  full and long name of your institute
   }
 
 % Titlegraphic appears in the middle of the titlepage
-\pgfdeclareimage[height=2cm]{titlegraphic}{img/ipht_logo.png}
+\pgfdeclareimage[height=2cm]{titlegraphic}{img/logo.png}
 \titlegraphic{\pgfuseimage{titlegraphic}}
 
 % Logo; use \insertlogo anywhere you want
 %\pgfdeclareimage[height=0.5cm]{university-logo}{img/logo2}
 %\logo{\pgfuseimage{university-logo}}
-
 
 
 %-------------------------------------------------------------------------------
@@ -93,6 +92,9 @@
 % % % % % Tweaks
 %\setbeamercolor{frametitle}{fg=red}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+% Color of the title
+\setbeamercolor{title}{bg=wheat}
 
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
@@ -147,6 +149,8 @@
             backend=bibtex]{biblatex}
 \bibliography{links}
 
+
+% Select here what you really want to have in the bibliography
 \DeclareBibliographyDriver{article}{%
 	\usebibmacro{bibindex}%
 	\usebibmacro{begentry}%
@@ -188,4 +192,4 @@
 \renewcommand{\cite}{\footfullcite}
 
 
-\setbeamercolor{title}{bg=wheat}
+
