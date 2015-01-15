@@ -4,6 +4,7 @@
 *.log
 *.out
 main*.pdf
+handout.pdf
 *blx.bib
 *.nav
 *.run.xml
@@ -11,6 +12,5 @@ main*.pdf
 *.toc
 *.synctex.gz
 .main-beamer.tex.swp
-main-article.fdb_latexmk
-main-beamer.fdb_latexmk
 *.fls
+*.fdb_latexmk

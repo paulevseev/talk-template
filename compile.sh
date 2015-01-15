@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-latexmk -bibtex -xelatex main-beamer.tex
-latexmk -bibtex -xelatex main-article.tex
+latexmk -e '$pdflatex = xelatex' -f -pdf main-beamer.tex
+latexmk -e '$pdflatex = xelatex' -f -pdf main-article.tex
+latexmk -pdf handout.tex

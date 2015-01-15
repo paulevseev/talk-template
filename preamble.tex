@@ -4,8 +4,6 @@
 % Requirements:
 %  * xelatex
 %  * biber
-%  * Fontin font (http://www.exljbris.com/fontinsans.html)
-
 
 %-------------------------------------------------------------------------------
 %                           Necessary packages
@@ -35,8 +33,9 @@
 %-------------------------------------------------------------------------------
 %                           Font specification
 %-------------------------------------------------------------------------------
+% Require XeTeX if uncommented
 \usepackage{fontspec}
-\setsansfont{Linux Biolinum O}
+\setsansfont{Linux Biolinum O}  % Fontin, Linux Biolinum O
 
 %-------------------------------------------------------------------------------
 %          Information about Title, Author, Affiliations
@@ -52,21 +51,20 @@
 \keywords{microscopy, Raman, spectroscopy, imaging, RACS, tumour cells}
 
 % Use template below if you are the only author
-%\author[R. Kiselev]{Roman Kiselev}
-%\institute[IPHT Jena]{
-%  Optical cell diagnostics\\
-%  Leibniz Institute of Photonic Technology
-%  }
-
-
+\author[R. Kiselev]{Roman Kiselev}
+\institute[IPHT Jena]{
+  Optical cell diagnostics\\
+  Leibniz Institute of Photonic Technology
+  }
 
 % Titlegraphic appears in the middle of the titlepage
-\pgfdeclareimage[height=0.5cm]{titlegraphic}{img/logo1}
+\pgfdeclareimage[height=2cm]{titlegraphic}{img/ipht_logo.png}
 \titlegraphic{\pgfuseimage{titlegraphic}}
 
 % Logo; use \insertlogo anywhere you want
-\pgfdeclareimage[height=0.5cm]{university-logo}{img/logo2}
-\logo{\pgfuseimage{university-logo}}
+%\pgfdeclareimage[height=0.5cm]{university-logo}{img/logo2}
+%\logo{\pgfuseimage{university-logo}}
+
 
 
 %-------------------------------------------------------------------------------
