@@ -29,5 +29,5 @@ You can take a look at this files under the **sample_output** folder.
 * If you want to use **pdflatex** instead of **xelatex**, then just comment out
 font specification in *preamble.tex* file (lines 37-38). Additionally it may be neccessary to insert command for language specification: `\usepackage[american]{babel}`.
 
-
+**NOTE** This template has been tested under Linux only.
 
