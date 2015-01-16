@@ -4,8 +4,21 @@
 %###############################################################################
 
 \maketitle           % makes title for article only
-\frame{\titlepage}   % makes title for presentation only
 
+% Create a title slide
+\begin{frame}[title]
+  \titlepage
+  % We cover slide number with a white rectangle
+  \begin{tikzpicture}[remember picture,overlay] 
+    \node [xshift=-9mm,yshift=6.5mm] at (current page.south east)
+        {
+          \begin{tikzpicture}
+            \draw [white, fill=white] (0,0) rectangle (1.6, 0.6);
+          \end{tikzpicture}
+        };
+  \end{tikzpicture}
+  \setcounter{framenumber}{0}
+\end{frame}
 
 % Structuring a talk is a difficult task and the following structure
 % may not be suitable. Here are some rules that apply for this
@@ -25,7 +38,7 @@
 %   just say so once. Everybody will be happy with that.
 
 \section*{Introduction}
-%----------------------
+%======================
 \begin{frame}{Introduction}
   
 \end{frame}
@@ -33,7 +46,7 @@
 
 
 \section{Motivation}
-%-------------------
+%===================
 \begin{frame}{Motivation – why we do this}
 
 \end{frame}
@@ -41,7 +54,7 @@
 
 
 \section{Materials and Methods}
-%------------------------------
+%==============================
 \begin{frame}{Materials}
              {And methods as well}
 
@@ -55,7 +68,7 @@
 
 
 \section{Results and Contribution}
-%---------------------------------
+%=================================
 \begin{frame}{Results and Contribution}
 
 \end{frame}
@@ -63,7 +76,7 @@
 
 
 \section*{Summary}
-%-----------------
+%=================
 \begin{frame}{Summary}
   % Keep the summary *very short*.
   \begin{itemize}
@@ -89,7 +102,6 @@
 
 
 % ########### Thanks ##########################################################
-
   \begin{frame}
     \begin{center}
       \begin{minipage}{0.7\textwidth}
@@ -123,7 +135,7 @@
 
 
 
-%#############################################################################
+%###############################################################################
 % All of the following is optional and typically not needed. 
 \appendix
 \section<presentation>*{\appendixname}
@@ -184,7 +196,7 @@
 
 
 \begin{frame}{Structure}
-  We have some text and then use \structure{\textbackslash{}structure} it it.
+  We have some text and then use \structure{\textbackslash{}structure} in it.
 \end{frame}
 
 \begin{frame}{Block}
@@ -292,7 +304,7 @@
   \begin{columns}
     \column[c]{0.45\textwidth}
       \begin{figure}
-        \includegraphics[width=8cm]{example.png}
+        \includegraphics[width=4cm]{example.png}
         \caption[my caption]{An example image}
       \end{figure}
     \column[c]{0.45\textwidth}
@@ -320,9 +332,9 @@
 
 \begin{frame}{Slide transitions}
   \begin{enumerate}
-    \item<1,2> First
-    \item<2> Second
-    \item<3> Third
+    \item<1,2> First slide transition
+    \item<2> Second slide transition
+    \item<3> Third slide transition
   \end{enumerate}
   \transblindshorizontal<2>
   \transblindsvertical<3>

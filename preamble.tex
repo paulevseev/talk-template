@@ -9,19 +9,23 @@
 %                           Necessary packages
 %-------------------------------------------------------------------------------
 \usepackage{graphicx}          % graphics
+%\usepackage{transparent}       % to make images semi-transparent
 \usepackage{hyperref}          % urls
 \usepackage{pgf}               % for images
-\usepackage{fancybox}          % for \shadowbox, \doublebox, \ovalbox, and \Ovalbox
 \usepackage{pgfpages}
+\usepackage{fancybox}          % for \shadowbox, \doublebox, \ovalbox, and \Ovalbox
+\usepackage{tikz}              % TikZ images
+%\usepackage{soul}              % striked out text, \st{} command
 %\usepackage{amsmath}
-%\usepackage{mhchem}            % chemical equations, \ce command
+%\usepackage{mhchem}            % chemical equations, \ce{} command
 \usepackage{amsfonts}          % http://ctan.org/pkg/amsfonts
-\usepackage{pifont}            % http://ctan.org/pkg/pifont
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
 %\usepackage{booktabs, caption} % table styling
 \usepackage{xcolor}            % custom colors
 \definecolor{wheat}{HTML}{F5DEB3}  % definition of a custom color
+
+\usepackage{pifont}            % http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 
 \graphicspath{ {./img/} }
 
@@ -114,14 +118,15 @@
 
 % Navigation symbols and frame numbers
 \setbeamertemplate{navigation symbols}{
-    \insertslidenavigationsymbol
-    \insertframenavigationsymbol
-    \insertsubsectionnavigationsymbol
-    \insertsectionnavigationsymbol
-    \insertdocnavigationsymbol
-    \insertbackfindforwardnavigationsymbol
-    \hspace{3mm}\insertframenumber/\inserttotalframenumber}
-\setbeamerfont{navigation symbols}{size=\normalsize}
+%    \insertslidenavigationsymbol
+%    \insertframenavigationsymbol
+%    \insertsubsectionnavigationsymbol
+%    \insertsectionnavigationsymbol
+%    \insertdocnavigationsymbol
+%    \insertbackfindforwardnavigationsymbol
+%    \hspace{3mm}
+     \insertframenumber~/\,\inserttotalframenumber~~\vspace{1mm}}
+\setbeamerfont{navigation symbols}{size=\Large}
 
 % Width of blocks
 \addtobeamertemplate{block begin}{%
